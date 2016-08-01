@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Question And Answer Portal</title>
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script src="javascript/default.js"></script>
+</head>
+<body id = "main">
+		<div id = "header">
+			<h1 class = "header_elements" id= "logo">AnswersHub</h1>
+			<p class = "header_elements" id= "main_searchbar"><input type = "text" id = "search_box"></p>
+			<p class = "header_elements" id= "search_submit"><input type = "submit" id= "search_box1" value = "Search"></p>
+			<p class = "header_elements" id= "ask_box"><input type = "submit" id = "ask_button" value = "Ask Question?"></p>
+		</div>
+		<div id = "navigation">
+			<ul>
+				<li class = "nav_items"><a>Home</a></li>
+				<li class = "nav_items"><a>Ask Question ?</a></li>
+				<li class = "nav_items"><a>Answer Questions</a></li>
+				<li class = "nav_items"><a>Questions</a></li>
+				<li class = "nav_items" id = "dropdown"><a class = "dorpbtn">Login/ SignUp</a>
+						 <div class="dropdown-content">
+      							<a href="#">User Login</a>
+      							<a href="#">Admin Login</a>
+      							<a href="#">SignUp</a>
+   						 </div>
+				</li>
+			</ul>
+	   </div>
+	   <div class = "clear"></div>
+	   <div id = "container">
+	   		<div id = "main-content">
+	   			<div class = "main-content-element" id = "content-header"><b>Recently Asked Questions</b></div>
+	   			
+	   			
+	   			<div class = "main-content-element" id = "questions0">
+	   					<div class = "display-question">
+	   						<div class = "question-inside" id = "question_data0">
+	   							<h3 id = "main-question0"></h3>
+	   						</div>
+	   						<div class = "question-inside" id = "question-description0">
+	   								AskedBy : 
+	   								<span class = "question-desc" id = "question-owner0">
+	   								</span> | 		Answers
+	   								<span class = "question-desc" id = "number-of-answers0">
+	   								
+	   								</span> | Views 
+	   								<span class = "question-desc" id = "views0">
+	   								</span>
+	   						</div>
+	   						<div class = "question-inside" id = "question_keywords0">
+	   								<span  id = keyword10></span> ,
+	   								<span  id = keyword20></span> ,
+	   								<span  id = keyword30></span>
+	   						</div>
+	   					</div>
+	   			</div>
+	   			
+	   			<div class = "main-content-element" id = "questions1">
+	   					<div class = "display-question">
+	   						<div class = "question-inside" id = "question_data1">
+	   							<h3 id = "main-question1"></h3>
+	   						</div>
+	   						<div class = "question-inside" id = "question-description1">
+	   								AskedBy : 
+	   								<span class = "question-desc" id = "question-owner1">
+	   								</span> | 		Answers
+	   								<span class = "question-desc" id = "number-of-answers1">
+	   								
+	   								</span> | Views 
+	   								<span class = "question-desc" id = "views1">
+	   								</span>
+	   						</div>
+	   						<div class = "question-inside" id = "question_keywords1">
+	   								<span  id = keyword11></span> ,
+	   								<span  id = keyword21></span> ,
+	   								<span  id = keyword31></span>
+	   						</div>
+	   					</div>
+	   			</div>
+	   			
+	   			<div class = "main-content-element" id = "questions2">
+	   					<div class = "display-question">
+	   						<div class = "question-inside" id = "question_data2">
+	   							<h3 id = "main-question2"></h3>
+	   						</div>
+	   						<div class = "question-inside" id = "question-description2">
+	   								AskedBy : 
+	   								<span class = "question-desc" id = "question-owner2">
+	   								</span> | 		Answers
+	   								<span class = "question-desc" id = "number-of-answers2">
+	   								
+	   								</span> | Views 
+	   								<span class = "question-desc" id = "views2">
+	   								</span>
+	   						</div>
+	   						<div class = "question-inside" id = "question_keywords2">
+	   								<span  id = keyword12></span> ,
+	   								<span  id = keyword22></span> ,
+	   								<span  id = keyword32></span>
+	   						</div>
+	   					</div>
+	   			</div>
+	   			
+	   			<div class = "main-content-element" id = "questions3">
+	   					<div class = "display-question">
+	   						<div class = "question-inside" id = "question_data3">
+	   							<h3 id = "main-question3"></h3>
+	   						</div>
+	   						<div class = "question-inside" id = "question-description3">
+	   								AskedBy : 
+	   								<span class = "question-desc" id = "question-owner3">
+	   								</span> | 		Answers
+	   								<span class = "question-desc" id = "number-of-answers3">
+	   								
+	   								</span>  | Views 
+	   								<span class = "question-desc" id = "views3">
+	   								</span>
+	   						</div>
+	   						<div class = "question-inside" id = "question_keywords3">
+	   								<span  id = keyword13></span> ,
+	   								<span  id = keyword23></span> ,
+	   								<span  id = keyword33></span>
+	   						</div>
+	   					</div>
+	   			</div>
+	   			
+	   			<div class = "main-content-element" id = "questions4">
+	   					<div class = "display-question">
+	   						<div class = "question-inside" id = "question_data4">
+	   							<h3 id = "main-question4"></h3>
+	   						</div>
+	   						<div class = "question-inside" id = "question-description4">
+	   								AskedBy : 
+	   								<span class = "question-desc" id = "question-owner4">
+	   								</span> | 		Answers
+	   								<span class = "question-desc" id = "number-of-answers4">
+	   								
+	   								</span>  | Views 
+	   								<span class = "question-desc" id = "views4">
+	   								</span>
+	   						</div>
+	   						<div class = "question-inside" id = "question_keywords4">
+	   								<span  id = keyword14></span> ,
+	   								<span  id = keyword24></span> ,
+	   								<span  id = keyword34></span>
+	   						</div>
+	   					</div>
+	   			</div>
+	   			
+	   			<div class = "main-content-element" id = "questions5">
+	   					<div class = "display-question">
+	   						<div class = "question-inside" id = "question_data5">
+	   							<h3 id = "main-question5"></h3>
+	   						</div>
+	   						<div class = "question-inside" id = "question-description5">
+	   								AskedBy : 
+	   								<span class = "question-desc" id = "question-owner5">
+	   								</span> | 		Answers
+	   								<span class = "question-desc" id = "number-of-answers5">
+	   								
+	   								</span>  | Views 
+	   								<span class = "question-desc" id = "views5">
+	   								</span>
+	   						</div>
+	   						<div class = "question-inside" id = "question_keywords5">
+	   								<span  id = keyword15></span> ,
+	   								<span  id = keyword25></span> ,
+	   								<span  id = keyword35></span>
+	   						</div>
+	   					</div>
+	   			</div>
+	   			<div class = "main-content-element" id = "questions6">
+	   					<div class = "display-question">
+	   						<div class = "question-inside" id = "question_data6">
+	   							<h3 id = "main-question6"></h3>
+	   						</div>
+	   						<div class = "question-inside" id = "question-description6">
+	   								AskedBy : 
+	   								<span class = "question-desc" id = "question-owner6">
+	   								</span> | 		Answers
+	   								<span class = "question-desc" id = "number-of-answers6">
+	   								
+	   								</span>  | Views 
+	   								<span class = "question-desc" id = "views6">
+	   								</span>
+	   						</div>
+	   						<div class = "question-inside" id = "question_keywords6">
+	   								<span  id = keyword16></span> ,
+	   								<span  id = keyword26></span> ,
+	   								<span  id = keyword36></span>
+	   						</div>
+	   					</div>
+	   			</div>
+	   			<div class = "main-content-element" id = "questions7">
+	   					<div class = "display-question">
+	   						<div class = "question-inside" id = "question_data7">
+	   							<h3 id = "main-question7"></h3>
+	   						</div>
+	   						<div class = "question-inside" id = "question-description7">
+	   								AskedBy : 
+	   								<span class = "question-desc" id = "question-owner7">
+	   								</span> | 		Answers
+	   								<span class = "question-desc" id = "number-of-answers7">
+	   								
+	   								</span> | Views 
+	   								<span class = "question-desc" id = "views7">
+	   								</span>
+	   						</div>
+	   						<div class = "question-inside" id = "question_keywords7">
+	   								<span  id = keyword17></span> ,
+	   								<span  id = keyword27></span> ,
+	   								<span  id = keyword37></span>
+	   						</div>
+	   					</div>
+	   			</div>
+	   			<div class = "main-content-element" id = "questions8">
+	   					<div class = "display-question">
+	   						<div class = "question-inside" id = "question_data8">
+	   							<h3 id = "main-question8"></h3>
+	   						</div>
+	   						<div class = "question-inside" id = "question-description8">
+	   								AskedBy : 
+	   								<span class = "question-desc" id = "question-owner8">
+	   								</span> | 		Answers
+	   								<span class = "question-desc" id = "number-of-answers8">
+	   								
+	   								</span> | Views 
+	   								<span class = "question-desc" id = "views8">
+	   								</span>
+	   						</div>
+	   						<div class = "question-inside" id = "question_keywords8">
+	   								<span  id = keyword18></span> ,
+	   								<span  id = keyword28></span> ,
+	   								<span  id = keyword38></span>
+	   						</div>
+	   					</div>
+	   			</div>
+	   			<div class = "main-content-element" id = "questions9">
+	   					<div class = "display-question">
+	   						<div class = "question-inside" id = "question_data9">
+	   							<h3 id = "main-question9"></h3>
+	   						</div>
+	   						<div class = "question-inside" id = "question-description9">
+	   								AskedBy : 
+	   								<span class = "question-desc" id = "question-owner9">
+	   								</span> | 		Answers
+	   								<span class = "question-desc" id = "number-of-answers9">
+	   								
+	   								</span>  | Views 
+	   								<span class = "question-desc" id = "views9">
+	   								</span>
+	   						</div>
+	   						<div class = "question-inside" id = "question_keywords9">
+	   								<span  id = keyword19></span> ,
+	   								<span  id = keyword29></span> ,
+	   								<span  id = keyword39></span>
+	   						</div>
+	   					</div>
+	   			</div>
+	   			
+	   		</div>
+	   		<div id = "sidebar">
+	   				<div id = "popular-questions">
+	   					
+	   				</div>
+	   		</div>
+	   </div>
+	   <div class = "clear"></div>
+	   <div id = footer>
+	   </div>
+</body>
+</html>

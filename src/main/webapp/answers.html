@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Question And Answer Portal</title>
+<link rel="stylesheet" type="text/css" href="css/answers.css">
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script src="javascript/answers.js"></script>
+</head>
+<body id = "main">
+		<div id = "header">
+			<h1 class = "header_elements" id= "logo">AnswersHub</h1>
+			<p class = "header_elements" id= "main_searchbar"><input type = "text" id = "search_box"></p>
+			<p class = "header_elements" id= "search_submit"><input type = "submit" id= "search_box1" value = "Search"></p>
+			<p class = "header_elements" id= "ask_box"><input type = "submit" id = "ask_button" value = "Ask Question?"></p>
+		</div>
+		<div id = "navigation">
+			<ul>
+				<li class = "nav_items"><a>Home</a></li>
+				<li class = "nav_items"><a>Ask Question ?</a></li>
+				<li class = "nav_items"><a>Answer Questions</a></li>
+				<li class = "nav_items"><a>Questions</a></li>
+				<li class = "nav_items" id = "dropdown"><a class = "dorpbtn">Login/ SignUp</a>
+						 <div class="dropdown-content">
+      							<a href="#">User Login</a>
+      							<a href="#">Admin Login</a>
+      							<a href="#">SignUp</a>
+   						 </div>
+				</li>
+			</ul>
+	   </div>
+	   <div class = "clear"></div>
+	   <div id = "container">
+	   		<div id = "main-content">
+	   			<div class = "main-content-element" id = "content-header"><span class = "search-answer-inside"><b>Answers</b></span>
+	   				<div id = "search-answer"> <span class = "search-answer-inside"><b></b></span><input type = "text" class = "search-answer-inside" id = "search-answer-input"></div>
+	   				<div id = "clear"></div>
+	   			</div>
+	   			<div class = "main-content-element" id = "questions">
+	   					
+	   					<div class = "display-question">
+	   						<div class = "question-inside" id = "question_data">
+	   							<h3 id = "main-question"></h3>
+	   						</div>
+	   						<div class = "question-inside" id = "question-description">
+	   								Posted by : 
+	   								<span class = "question-desc" id = "question-owner">
+	   			
+	   								</span> |  Answers
+	   								<span class = "question-desc" id = "number-of-answers">
+	   								
+	   								</span>  | Views 
+	   								<span class = "question-desc" id = "views">
+	   								</span>
+	   						</div>
+	   						<div class = "question-inside" id = "question_keywords">
+									Topics :
+	   								<span  id = keyword1></span> ,
+	   								<span  id = keyword2></span> ,
+	   								<span  id = keyword3></span>
+	   						</div>
+	   					</div>
+	   					
+	   					<div class = "display-answer" id = "display-answer0">
+	   						<div class = "answered-user-data">
+	   								<img class = "user-image" src = "images.png">
+	   								<p class = "user-name" id = "user-name0"></p>
+	   						</div>
+	   						<div class = "answer-content">
+	   							<p class = "answer" id = "answer0">
+	   							</p>
+	   							<div class = "answer-data">
+	   									<div class = "answer-rating" id = "answer-rating0"></div>
+	   									<div class = "answer-comments" id = "answer-comments0">Comments</div>
+	   									<div class = "give-answer-rating">
+	   										<form>
+	   										<input type = "radio" name = "rating" value = "+1">Like
+	   										<input type = "radio" name = "rating" value = "-1">Dislike
+	   										</form>
+	   									</div>
+	   									<div class = "clear"></div>
+	   							</div>
+	   						</div>
+	   						<div class = "clear"></div>
+	   					</div>
+	   					
+	   					<div class = "display-answer" id = "display-answer1">
+	   						<div class = "answered-user-data">
+	   								<img class = "user-image" src = "images.png">
+	   								<p class = "user-name" id = "user-name1"></p>
+	   						</div>
+	   						<div class = "answer-content">
+	   							<p class = "answer" id = "answer1">
+	   							</p>
+	   							<div class = "answer-data">
+	   									<div class = "answer-rating" id = "answer-rating1"></div>
+	   									<div class = "answer-comments" id = "answer-comments1">Comments</div>
+	   									<div class = "give-answer-rating">
+	   										<form>
+	   										<input type = "radio" name = "rating" value = "+1">Like
+	   										<input type = "radio" name = "rating" value = "-1">Dislike
+	   										</form>
+	   									</div>
+	   									<div class = "clear"></div>
+	   							</div>
+	   						</div>
+	   						<div class = "clear"></div>
+	   					</div>
+	   					
+	   					<div class = "display-answer" id = "display-answer2">
+	   						<div class = "answered-user-data">
+	   								<img class = "user-image" src = "images.png">
+	   								<p class = "user-name" id = "user-name2"></p>
+	   						</div>
+	   						<div class = "answer-content">
+	   							<p class = "answer" id = "answer2">
+	   							</p>
+	   							<div class = "answer-data">
+	   									<div class = "answer-rating" id = "answer-rating2"></div>
+	   									<div class = "answer-comments" id = "answer-comments2">Comments</div>
+	   									<div class = "give-answer-rating">
+	   										<form>
+	   										<input type = "radio" name = "rating" value = "+1">Like
+	   										<input type = "radio" name = "rating" value = "-1">Dislike
+	   										</form>
+	   									</div>
+	   									<div class = "clear"></div>
+	   							</div>
+	   						</div>
+	   						<div class = "clear"></div>
+	   					</div>
+	   					
+	   					<div class = "display-answer" id = "display-answer3">
+	   						<div class = "answered-user-data">
+	   								<img class = "user-image" src = "images.png">
+	   								<p class = "user-name" id = "user-name3"></p>
+	   						</div>
+	   						<div class = "answer-content">
+	   							<p class = "answer" id = "answer3">
+	   							</p>
+	   							<div class = "answer-data">
+	   									<div class = "answer-rating" id = "answer-rating3"></div>
+	   									<div class = "answer-comments" id = "answer-comments3">Comments</div>
+	   									<div class = "give-answer-rating">
+	   										<form>
+	   										<input type = "radio" name = "rating" value = "+1">Like
+	   										<input type = "radio" name = "rating" value = "-1">Dislike
+	   										</form>
+	   									</div>
+	   									<div class = "clear"></div>
+	   							</div>
+	   						</div>
+	   						<div class = "clear"></div>
+	   					</div>
+	   					
+	   					<div class = "display-answer" id = "display-answer4">
+	   						<div class = "answered-user-data">
+	   								<img class = "user-image" src = "images.png">
+	   								<p class = "user-name" id = "user-name4"></p>
+	   						</div>
+	   						<div class = "answer-content">
+	   							<p class = "answer" id = "answer4">
+	   							</p>
+	   							<div class = "answer-data">
+	   									<div class = "answer-rating" id = "answer-rating4">s</div>
+	   									<div class = "give-answer-rating">
+	   										<form>
+	   										<input type = "radio" name = "rating" value = "+1">Like
+	   										<input type = "radio" name = "rating" value = "-1">Dislike
+	   										</form>
+	   									</div>
+	   									<div class = "clear"></div>
+	   							</div>
+	   						</div>
+	   						<div class = "clear"></div>
+	   					</div>
+	   					
+	   					<div class = "display-answer" id = "display-answer5">
+	   						<div class = "answered-user-data">
+	   								<img class = "user-image" src = "images.png">
+	   								<p class = "user-name" id = "user-name5"></p>
+	   						</div>
+	   						<div class = "answer-content">
+	   							<p class = "answer" id = "answer5">
+	   							</p>
+	   							<div class = "answer-data">
+	   									<div class = "answer-rating" id = "answer-rating5"></div>
+	   									<div class = "answer-comments" id = "answer-comments5">Comments</div>
+	   									<div class = "give-answer-rating">
+	   										<form>
+	   										<input type = "radio" name = "rating" value = "+1">Like
+	   										<input type = "radio" name = "rating" value = "-1">Dislike
+	   										</form>
+	   									</div>
+	   									<div class = "clear"></div>
+	   							</div>
+	   						</div>
+	   						<div class = "clear"></div>
+	   					</div>
+	   					
+	   					<div class = "display-answer" id = "display-answer6">
+	   						<div class = "answered-user-data">
+	   								<img class = "user-image" src = "images.png">
+	   								<p class = "user-name" id = "user-name6"></p>
+	   						</div>
+	   						<div class = "answer-content">
+	   							<p class = "answer" id = "answer6">
+	   							</p>
+	   							<div class = "answer-data">
+	   									<div class = "answer-rating" id = "answer-rating6"> </div>
+	   									<div class = "answer-comments" id = "answer-comments6">Comments</div>
+	   									<div class = "give-answer-rating">
+	   										<form>
+	   										<input type = "radio" name = "rating" value = "+1">Like
+	   										<input type = "radio" name = "rating" value = "-1">Dislike
+	   										</form>
+	   									</div>
+	   									<div class = "clear"></div>
+	   							</div>
+	   						</div>
+	   						<div class = "clear"></div>
+	   					</div>
+	   					
+	   					<div class = "display-answer" id = "display-answer7">
+	   						<div class = "answered-user-data">
+	   								<img class = "user-image" src = "images.png">
+	   								<p class = "user-name" id = "user-name7"></p>
+	   						</div>
+	   						<div class = "answer-content">
+	   							<p class = "answer" id = "answer7">
+	   							</p>
+	   							<div class = "answer-data">
+	   									<div class = "answer-rating" id = "answer-rating7"></div>
+	   									<div class = "answer-comments" id = "answer-comments7">Comments</div>
+	   									<div class = "give-answer-rating">
+	   										<form>
+	   										<input type = "radio" name = "rating" value = "+1">Like
+	   										<input type = "radio" name = "rating" value = "-1">Dislike
+	   										</form>
+	   									</div>
+	   									<div class = "clear"></div>
+	   							</div>
+	   						</div>
+	   						<div class = "clear"></div>
+	   					</div>
+	   					
+	   					<div class = "display-answer" id = "display-answer8">
+	   						<div class = "answered-user-data">
+	   								<img class = "user-image" src = "images.png">
+	   								<p class = "user-name" id = "user-name8"></p>
+	   						</div>
+	   						<div class = "answer-content">
+	   							<p class = "answer" id = "answer8">
+	   							</p>
+	   							<div class = "answer-data">
+	   									<div class = "answer-rating" id = "answer-rating8"></div>
+	   									<div class = "answer-comments" id = "answer-comments8">Comments</div>
+	   									<div class = "give-answer-rating">
+	   										<form>
+	   										<input type = "radio" name = "rating" value = "+1">Like
+	   										<input type = "radio" name = "rating" value = "-1">Dislike
+	   										</form>
+	   									</div>
+	   									<div class = "clear"></div>
+	   							</div>
+	   						</div>
+	   						<div class = "clear"></div>
+	   					</div>
+	   					
+	   					<div class = "display-answer" id = "display-answer9">
+	   						<div class = "answered-user-data">
+	   								<img class = "user-image" src = "images.png">
+	   								<p class = "user-name" id = "user-name9"></p>
+	   						</div>
+	   						<div class = "answer-content">
+	   							<p class = "answer" id = "answer9">
+	   							</p>
+	   							<div class = "answer-data">
+	   									<div class = "answer-rating" id = "answer-rating9"></div>
+	   									<div class = "answer-comments" id = "answer-comments9">Comments</div>
+	   									<div class = "give-answer-rating">
+	   										<form>
+	   										<input type = "radio" name = "rating" value = "+1">Like
+	   										<input type = "radio" name = "rating" value = "-1">Dislike
+	   										</form>
+	   									</div>
+	   									<div class = "clear"></div>
+	   							</div>
+	   						</div>
+	   						<div class = "clear"></div>
+	   					</div>
+	   			</div>
+	   		</div>
+	   		<div id = "sidebar">
+	   				<div id = "popular-questions">
+	   					
+	   				</div>
+	   		</div>
+	   </div>
+	   <div class = "clear"></div>
+	   <div id = footer>
+	   </div>
+</body>
+</html>
