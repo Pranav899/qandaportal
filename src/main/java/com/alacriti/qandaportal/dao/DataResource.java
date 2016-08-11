@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class DataResource{
+	
 	public static ResultSet getData(String query){
 		ResultSet resultSet = null ;
 		try {

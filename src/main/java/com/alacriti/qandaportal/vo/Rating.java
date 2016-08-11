@@ -3,14 +3,14 @@ package com.alacriti.qandaportal.vo;
 public class Rating{
 	private long questionId;
 	private long answerId;
-	private int rating;
-	private Long userId;
+	private long rating;
+	private long userId;
 	public Rating(){
 		
 	}
 	
-	public Rating(long questionId, long answerId, int rating,
-			 Long userId) {
+	public Rating(long questionId, long answerId, long rating,
+			 long userId) {
 		super();
 		this.questionId = questionId;
 		this.answerId = answerId;
@@ -30,16 +30,16 @@ public class Rating{
 	public void setAnswerId(long answerId){
 		this.answerId = answerId;
 	}
-	public int getRating(){
+	public long getRating(){
 		return rating;
 	}
-	public void setRating(int rating) {
+	public void setRating(long rating) {
 		this.rating = rating;
 	}
 	public long getUserId() {
 		return userId;
 	}
-	public void setUserId(Long userId) {
+	public void setUserId(long userId){
 		this.userId = userId;
 	}
 }

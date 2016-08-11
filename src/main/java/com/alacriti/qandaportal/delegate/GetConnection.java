@@ -15,7 +15,6 @@ public class GetConnection {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			connection = DriverManager.getConnection("jdbc:mysql://192.168.35.70:3306/qaportal_dev","qaportal_dev","qaportal_dev");
-			log.info("Connection created.");
 		} catch (Exception e) {
 			log.info(e);
 		}

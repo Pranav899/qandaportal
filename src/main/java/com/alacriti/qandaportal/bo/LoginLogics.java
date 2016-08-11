@@ -1,28 +1,19 @@
 package com.alacriti.qandaportal.bo;
 
-import java.util.Iterator;
-import java.util.List;
+import org.apache.log4j.Logger;
+
 import com.alacriti.qandaportal.dao.LoginDAO;
 import com.alacriti.qandaportal.vo.Login;
 
 public class LoginLogics {
-	
-	public static Login validateLogin(Login login){
-		List<Login> logins = LoginDAO.getLoginData();
-		Iterator<Login> iterator = logins.iterator();
-		boolean valid = false;
-		while(iterator.hasNext()){
-			Login newLogin = iterator.next();
-			if((newLogin.getUsername() == login.getUsername()) && (newLogin.getPassword() == login.getPassword())){
-				valid = true;
-				break;
-			}
-		}
-		if(valid == true){
-			return login;
+	static Logger log = Logger.getLogger(LoginLogics.class);
+	public static boolean validateLogin(Login login){
+		String password = LoginDAO.getLoginData(login);
+		if(login.getPassword().equals(password)){
+			return true;
 		}
 		else{
-			return new Login("pavan","kumar");
+			return false;
 		}
 	}
 }

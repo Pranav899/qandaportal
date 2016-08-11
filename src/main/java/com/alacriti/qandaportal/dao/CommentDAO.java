@@ -17,7 +17,6 @@ public class CommentDAO {
 	public static ArrayList<Comment> getComments(long questionId, long answerId){
 		ArrayList<Comment> comments = new ArrayList<Comment>();
 		String query = "select * from QAP_comments_tbl where answer_id ="+answerId+" and question_id ="+questionId+" order by comment_id desc;";
-		log.info(query);
 		Connection connection = GetConnection.requestConnection();
 		Statement statement = null;
 		ResultSet resultSet = null;
@@ -41,9 +40,11 @@ public class CommentDAO {
 		return comments;
 	}
 	public static void addComment(Comment comment){
-		String query ="INSERT INTO QAP_comments_tbl (answer_id, question_id, user_id,comments) VALUES ("+comment.getAnswerid()+","+comment.getQuestionId()+","+comment.getuserId()+","+comment.getComment()+");";
+		log.info("Entered into DAO.");
+		String query ="INSERT INTO QAP_comments_tbl (answer_id, question_id, user_id,comments) VALUES ("+comment.getAnswerId()+","+comment.getQuestionId()+","+comment.getuserId()+",'"+comment.getComment()+"');";
 		Connection connection = GetConnection.requestConnection();
 		Statement statement = null;
+		log.info(query);
 		try {
 			statement = connection.createStatement();
 			statement.executeUpdate(query);

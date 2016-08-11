@@ -17,16 +17,25 @@ public class Comment {
 		this.comment = comment;
 		this.userId = userId;
 	}
+	
+	public Comment(long answerId, long questionId,long userId,String comment){
+		super();
+		this.questionId = questionId;
+		this.answerid = answerId;
+		this.comment = comment;
+		this.userId = userId;
+	}
+	
 	public long getQuestionId(){
 		return questionId;
 	}
 	public void setQuestionId(long questionId) {
 		this.questionId = questionId;
 	}
-	public long getAnswerid() {
+	public long getAnswerId() {
 		return answerid;
 	}
-	public void setAnswerid(long answerid) {
+	public void setAnswerId(long answerid) {
 		this.answerid = answerid;
 	}
 	public long getCommentId() {

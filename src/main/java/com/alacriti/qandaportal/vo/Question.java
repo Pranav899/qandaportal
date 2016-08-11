@@ -15,7 +15,7 @@ public class Question {
 	
 	public Question(long questionId, long userId, String question,
 			String dateAdded, long parentQuestionId, String topic1,
-			String topic2, String topic3, long numberOfAnswers, long views) {
+			String topic2, String topic3, long numberOfAnswers,long views){
 		super();
 		this.questionId = questionId;
 		this.userId = userId;
@@ -28,7 +28,16 @@ public class Question {
 		this.numberOfAnswers = numberOfAnswers;
 		this.views = views;
 	}
-	public long getViews() {
+	public Question(long userId,String question,String dateAdded,String topic1,
+			String topic2, String topic3){
+		this.userId = userId;
+		this.question = question;
+		this.dateAdded = dateAdded;
+		this.topic1 = topic1;
+		this.topic2 = topic2;
+		this.topic3 = topic3;
+	}
+	public long getViews(){
 		return views;
 	}
 	public void setViews(long views) {

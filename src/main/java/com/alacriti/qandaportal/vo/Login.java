@@ -7,13 +7,11 @@ public class Login {
 	public Login(){
 		
 	}
-	
 	public Login(String username, String password) {
 		super();
 		this.username = username;
 		this.password = password;
 	}
-
 	public String getUsername() {
 		return username;
 	}
