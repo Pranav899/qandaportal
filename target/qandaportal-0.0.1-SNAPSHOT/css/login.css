@@ -3,10 +3,12 @@
 	width : 1000px;
 	background : #DEDCDC;
 }
+.fixed-division{
+	position : fixed;
+	top : 0;
+}
 div#header{
-	top : 0px;
 	width : 1000px;
-	position: fixed;
 	margin-left : 170px;
 	background : grey;
 	overflow : auto;
@@ -59,10 +61,10 @@ div#header{
 	border-radius : 10px;
 }
 #navigation{
-	margin-top : 75px;
+	margin-top : -14px;
 	width : 1050px;
 	margin-left : 130px;
-	background : orange;
+	background : #DEDCDC;
 }
 .nav_items{
 	float : left;
@@ -106,8 +108,7 @@ li a:hover {
 #container{
 	width : 100%;
 	margin-left : 170px;
-	margin-top : 10px;
-	background : white;
+	margin-top : 107px;
 }
 #main-content{
 	width : 100%;

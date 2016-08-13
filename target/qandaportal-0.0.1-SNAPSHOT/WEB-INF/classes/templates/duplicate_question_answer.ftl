@@ -8,6 +8,7 @@
 <script src="/qandaportal/javascript/answers.js"></script>
 </head>
 <body id = "main">
+		<div class = "fixed-division">
 		<div id = "header">
 			<h1 class = "header_elements" id= "logo">AnswersHub</h1>
 			<p class = "header_elements" id= "main_searchbar"><input type = "text" id = "search_box"></p>
@@ -34,6 +35,7 @@
 			</ul>
 	   </div>
 	   <div class = "clear"></div>
+	   </div>
 	   <div id = "container">
 	   		<div id = "main-content">
 
@@ -87,11 +89,11 @@
 	   							<div class = "answer-data">
 	   									<div class = "answer-comments" id = "answer-comments"><a href = "/qandaportal/rest/comments/${question.questionId}/${answer.answerId}">Comments</a></div>
 	   									<div class = "give-answer-rating">
-	   										<form id="positive" class = "submit-positive-rating" method = "POST" action = "/qandaportal/rest/rating/add/${answer.questionId}/${answer.answerId}/1">
-	   											<span id = "positive-rating">${answer.positiveRating}</span><img src = "/qandaportal/images/like.jpg" name = "rating" value = "Like" class = "positive-value">
+	   										<form id="positive" class = "submit-positive-rating">
+	   											<span id = "positive-rating">${answer.positiveRating}</span><img src = "/qandaportal/images/like.jpg" name = "rating" data-question-Id = ${answer.questionId} data-answer-Id = ${answer.answerId} class = "positive-value">
 	   										</form>
-	   										<form id="negative" class = "submit-negative-rating" method = "POST" action = "/qandaportal/rest/rating/add/${answer.questionId}/${answer.answerId}/0">
-	   										    <img src = "/qandaportal/images/dislike.png" name = "rating" value = "Dislike" class= "negative-value"><span id = "negative-rating">${answer.negativeRating}</span>
+	   										<form id="negative" class = "submit-negative-rating">
+	   										    <img src = "/qandaportal/images/dislike.png" name = "rating" data-question-Id = ${answer.questionId} data-answer-Id = ${answer.answerId} class= "negative-value"><span id = "negative-rating">${answer.negativeRating}</span>
 											</form>
 	   									</div>
 	   									<div class = "clear"></div>

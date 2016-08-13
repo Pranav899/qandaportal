@@ -8,6 +8,7 @@
 <script src="/qandaportal/javascript/default.js"></script>
 </head>
 <body id = "main">
+		<div class = "fixed-division">
 		<div id = "header">
 			<h1 class = "header_elements" id= "logo">AnswersHub</h1>
 			<p class = "header_elements" id= "main_searchbar"><input type = "text" id = "search_box"></p>
@@ -35,6 +36,7 @@
 			</ul>
 	   </div>
 	   <div class = "clear"></div>
+	   </div>
 	   <div id = "container">
 	   		<div id = "main-content">
 	   			

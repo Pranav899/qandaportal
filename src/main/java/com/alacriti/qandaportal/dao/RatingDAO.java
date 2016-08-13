@@ -58,7 +58,6 @@ public class RatingDAO{
 			} catch (SQLException e){
 			}
 		}
-		log.info(negativeRating);
 		return negativeRating;
 	}
 	public static void addRating(Rating rating){
@@ -70,21 +69,18 @@ public class RatingDAO{
 		ResultSet resultSet = null;
 		long present = 0;
 		try {
-			log.info("Entered to try block.");
 			statement = connection.createStatement();
 			resultSet = statement.executeQuery(queryForCheck);
 			while(resultSet.next()){
 				present = resultSet.getLong(1);
 			}
 			if(present == 0){
-				log.info("Entered to if.");
 				String query = "INSERT QAP_rating_tbl VALUES ("+rating.getAnswerId()+","+rating.getQuestionId()+","+rating.getUserId()+","+rating.getRating()+");";
 				log.info(query);
 				statement2 = connection.createStatement();
 				statement2.executeUpdate(query);
 			}
 			else{
-				log.info("Entered to else");
 				String query = "UPDATE QAP_rating_tbl SET rating = "+rating.getRating()+" WHERE question_id = "+rating.getQuestionId()+" AND answer_id = "+rating.getAnswerId()+" AND user_id = "+rating.getUserId()+";";
 				statement2 = connection.createStatement();
 				statement2.executeUpdate(query);

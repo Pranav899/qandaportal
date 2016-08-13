@@ -26,13 +26,15 @@ public class AdminResource {
 	
 	@POST
 	@Path("/confirm/{questionId}/{parentId}")
-	public void conformParentId(@PathParam("questionId") long questionId, @PathParam("parentId") long parentId){
+	public String conformParentId(@PathParam("questionId") long questionId, @PathParam("parentId") long parentId){
 		long result = AdminLogics.confirmStatus(questionId,parentId);
+		return AdminDelegate.getQuestionsForConfirming();
 	}
 	
 	@POST
 	@Path("/deny/{questionId}/{parentId}")
-	public void denyParentId(@PathParam("questionId") long questionId, @PathParam("parentId") long parentId){
+	public String denyParentId(@PathParam("questionId") long questionId, @PathParam("parentId") long parentId){
 		long result = AdminLogics.denyStatus(questionId,parentId);
+		return AdminDelegate.getQuestionsForConfirming();
 	}
 }

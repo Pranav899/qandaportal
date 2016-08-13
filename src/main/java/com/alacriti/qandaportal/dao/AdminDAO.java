@@ -7,14 +7,17 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import com.alacriti.qandaportal.delegate.GetConnection;
 import com.alacriti.qandaportal.vo.Question;
 
 public class AdminDAO {
+	static Logger log = Logger.getLogger(AdminDAO.class);
 	public static List<Question> getQuestionsForConfirming(){
 		List<Question> questions = new ArrayList<Question>();
 		Connection connection = GetConnection.requestConnection();
-		String query = "select * from QAP_question_tbl where question_pid is not null and admin_status is null;";
+		String query = "select * from QAP_question_tbl where question_pid is  not null and admin_status = false or null;";
 		Statement statement = null;
 		ResultSet resultSet = null;
 		try {
@@ -68,11 +71,13 @@ public class AdminDAO {
 	public static long denyStatus(long questionId, long parentId) {
 		long result = 0;
 		Connection connection = GetConnection.requestConnection();
-		String query = "update QAP_question_tbl set admin_status = false where question_id = "+questionId+" and question_pid = "+parentId+";";
+		log.info("Entered to deny");
+		String query = "update QAP_question_tbl set admin_status = false, question_pid = null where question_id = "+questionId+";";
 		Statement statement = null;
 		try {
 			statement = connection.createStatement();
 			result = statement.executeUpdate(query);
+			log.info(result);
 			} catch (Exception e){
 				
 			} finally{

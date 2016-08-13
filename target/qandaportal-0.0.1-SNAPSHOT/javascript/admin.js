@@ -1,4 +1,32 @@
 $(document).ready(function(){
+	$(document.body).on("click",".confirm",function(){
+		var questionId = $(this).data("questionId");
+		var parentId = $(this).data("parentId");
+		console.log(questionId);
+		console.log(parentId);
+		$.ajax({
+			type  : 'POST',
+			url : '/qandaportal/rest/admin/confirm/'+questionId+'/'+parentId,
+			success : function(data){
+				console.log(data);
+				$("#tablebody").html(data);
+			}
+		});
+	});
+	$(document.body).on("click",".deny",function(){
+		var questionId = $(this).data("questionId");
+		var parentId = $(this).data("parentId");
+		console.log(questionId);
+		console.log(parentId);
+		$.ajax({
+			type  : 'POST',
+			url : '/qandaportal/rest/admin/deny/'+questionId+'/'+parentId,
+			success : function(data){
+				console.log(data);
+				$("#tablebody").html(data);
+			}
+		});
+	});
 	$(document.body).on("mouseover","a",function(){
 		$(this).css({
 			"text-decoration" : "underline"
